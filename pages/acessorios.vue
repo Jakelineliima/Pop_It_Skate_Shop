@@ -1,17 +1,21 @@
 <template>
   <div class="acessorios gridacessorios">
-    <appheader class="menu"/>
+    <Appheader class="menu" />
     <img
       class="banner"
-      src="../components/imagens/Banner acessorios.jpg" longDesc="Skate Park com varias pessoas andando de skate e conversando"/>
+      src="../assets/imagens/Banner acessorios.jpg"
+      longdesc="Skate Park com varias pessoas andando de skate e conversando"
+    />
 
     <cardacessorio class="card" />
     <div class="txt">
       <p>
-        Na <strong>Pop-It</strong> você encontra acessórios com os melhores preços.
-  
+        Na
+        <strong>Pop-It</strong>
+ você encontra acessórios com os melhores preços.
       </p>
     </div>
+    <footer />
   </div>
 </template>
 
@@ -24,10 +28,8 @@
 .acessorios {
   grid-column: 1/4;
 }
-.menu{
+.menu {
   grid-column: 1/4;
- 
-
 }
 
 .banner {
@@ -48,14 +50,14 @@
   padding: 57px;
   font-size: 18px;
 }
-@media(max-width: 924px){
-  .txt{
-    text-align: justify
+@media (max-width: 924px) {
+  .txt {
+    text-align: justify;
   }
 }
-@media(max-width: 800px){
-  .banner{
-  margin-top: -4%;
+@media (max-width: 800px) {
+  .banner {
+    margin-top: -4%;
   }
 }
 </style>
@@ -65,12 +67,14 @@
 // @ is an alias to /src
 
 import cardacessorio from "../components/cards/cardacessorio.vue";
-import appheader from "../components/appheader.vue"
+import Appheader from "../components/Appheader.vue";
+import rodape from "../components/rodape.vue";
 export default {
   name: "acessorios",
   components: {
     cardacessorio,
-    appheader
+    Appheader,
+    rodape
   }
 };
 </script>

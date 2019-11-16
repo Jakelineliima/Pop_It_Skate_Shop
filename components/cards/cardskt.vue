@@ -6,7 +6,7 @@
   <section class="cards" id="card">
 
    <div class="card1 aligncard">
-    <img class="imgskt" src="../imagens/shape1.png" alt="Shape de skate com o nome do Skatista Luan de Oliveira"/>
+    <img class="imgskt" src="../../assets/imagens/shape1.png" alt="Shape de skate com o nome do Skatista Luan de Oliveira"/>
     <h2>Shape Flip</h2>
     <p>
       Shape Flip
@@ -17,7 +17,7 @@
   </div> 
  
   <div class="card2 aligncard" id="card2">
-    <img class="imgskt" src="../imagens/shape2.png" alt="Shape de skate cor rosa desenhada uma mão com boca"/>
+    <img class="imgskt" src="../../assets/imagens/shape2.png" alt="Shape de skate cor rosa desenhada uma mão com boca"/>
     <h2>Shape Santa Cruz</h2>
     <p>
       Shape Santa Cruz 
@@ -28,7 +28,7 @@
   </div>
 
    <div class="card3 aligncard">
-    <img class="imgskt" src="../imagens/shape3.png" alt="Shape de skate desenhado uma mão com boca azul"/>
+    <img class="imgskt" src="../../assets/imagens/shape3.png" alt="Shape de skate desenhado uma mão com boca azul"/>
     <h2>Shape Santa Cruz</h2>
     <p>
        Shape Santa Cruz
@@ -43,7 +43,7 @@
    <section class="cards2">
      
     <div class="card4 aligncard">
-    <img class="imgskt" src="../imagens/shape4.png" alt="Shape de skate cor rosa com o nome Cisco escrito"/>
+    <img class="imgskt" src="../../assets/imagens/shape4.png" alt="Shape de skate cor rosa com o nome Cisco escrito"/>
     <h2>Shape Cisco</h2>
     <p>
       Shape Cisco
@@ -54,7 +54,7 @@
   </div>
 
   <div class="card5 aligncard">
-    <img class="imgskt" src="../imagens/shape5.png" alt="Shape de skate com uma caveira com capuz desenhada"/>
+    <img class="imgskt" src="../../assets/imagens/shape5.png" alt="Shape de skate com uma caveira com capuz desenhada"/>
     <h2>Shape Santa Cruz</h2>
     <p>
       Shape Santa Cruz
@@ -65,7 +65,7 @@
   </div>
 
   <div class="card6 aligncard">
-    <img class="imgskt" src="../imagens/shape6.png" alt="Shape de skate escrito em preto skate" />
+    <img class="imgskt" src="../../assets/imagens/shape6.png" alt="Shape de skate escrito em preto skate" />
     <h2>Shape Progress</h2>
     <p>
       Shape Progress
@@ -81,7 +81,7 @@
 
   <section class="cards3">
       <div class="card7 aligncard">
-    <img class="imgskt" src="../imagens/Truck Crail Netozzila.jpg" alt="Truck de skate azul e branco" />
+    <img class="imgskt" src="../../assets/imagens/Truck Crail Netozzila.jpg" alt="Truck de skate azul e branco" />
     <h2>Truck Crail</h2>
     <p>
       Truck Crail
@@ -92,7 +92,7 @@
   </div>
 
   <div class="card8 aligncard">
-    <img class="imgskt" src="../imagens/Truck Danilo.jpg" alt="Truck de skate com as cores verde vermelho e amarelo escrito Danilo Danti" />
+    <img class="imgskt" src="../../assets/imagens/Truck Danilo.jpg" alt="Truck de skate com as cores verde vermelho e amarelo escrito Danilo Danti" />
    
     <h2>Truck Danillo Dante</h2>
     <p>
@@ -104,7 +104,7 @@
   </div>
 
   <div class="card9 aligncard">
-    <img class="imgskt" src="../imagens/Truck thrasher.jpg" alt="Truck de skate escrito Thrasher" />
+    <img class="imgskt" src="../../assets/imagens/Truck thrasher.jpg" alt="Truck de skate escrito Thrasher" />
     <h2>Truck Independent</h2>
     <p>
      Truck Independent

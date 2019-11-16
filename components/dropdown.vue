@@ -8,10 +8,12 @@
         <v-list-item-title>{{ item.title }}</v-list-item-title>
       </v-list-item>
     </v-list>
+    <footer/>
   </v-menu>
 </template>
 
 <script>
+
 export default {
   name: "dropdown",
   data ()  {

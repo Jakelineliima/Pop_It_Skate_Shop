@@ -6,18 +6,18 @@
   <section class="cards" id="card">
 
    <div class="card1 aligncard">
-    <img class="imgskt" src="../imagens/shape11.png" alt="Shape de skate com uma lamborguine desenhada" />
-    <h2>Shape Element</h2>
+    <img class="imgskt" src="../../assets/imagens/shape11.png" alt="Shape de skate com uma lamborguine desenhada" />
+    <h2>Tênis DC</h2>
     <p>
-      Shape Element
-      <br />Nijah Gold
+      Tênis DC Shoes Headrow
+      <br />
     </p>
     <h2>R$ 500,00</h2>
     <v-btn class="btn" width="168" color="#000">Comprar</v-btn>
   </div> 
  
   <div class="card2 aligncard" id="card2">
-    <img class="imgskt" src="../imagens/camiseta2.png" alt="Camiseta Elemente cinza com uma arvore andando de skate" />
+    <img class="imgskt" src="../../assets/imagens/camiseta2.png" alt="Camiseta Elemente cinza com uma arvore andando de skate" />
     <h2>Camiseta Element</h2>
     <p>
       Camiseta Element
@@ -28,7 +28,7 @@
   </div>
 
    <div class="card3 aligncard">
-    <img class="imgskt" src="../imagens/thrasher-magazine-.png" alt="Camiseta Thrasher Ande de skate e va para a prisão" />
+    <img class="imgskt" src="../../assets/imagens/thrasher-magazine-.png" alt="Camiseta Thrasher Ande de skate e va para a prisão" />
     <h2>Camiseta Thrasher</h2>
     <p>
        Camiseta Thrasher 
@@ -43,7 +43,7 @@
    <section class="cards2">
      
     <div class="card4 aligncard">
-    <img class="imgskt" src="../imagens/camiseta RVCA.png" alt="Camiseta branca da marca RVCA" />
+    <img class="imgskt" src="../../assets/imagens/camiseta RVCA.png" alt="Camiseta branca da marca RVCA" />
     <h2>Camiseta RVCA</h2>
     <p>
       Camiseta RVCA 
@@ -54,7 +54,7 @@
   </div>
 
   <div class="card5 aligncard">
-    <img class="imgskt" src="../imagens/bermuda1.png" alt="Bermuda Listrada de tons de laranja e azul" />
+    <img class="imgskt" src="../../assets/imagens/bermuda1.png" alt="Bermuda Listrada de tons de laranja e azul" />
     <h2>Bermuda RVCA</h2>
     <p>
       Bermuda RVCA
@@ -65,7 +65,7 @@
   </div>
 
   <div class="card6 aligncard">
-    <img class="imgskt" src="../imagens/shape12.png" alt="Shape de skate DGK com Logo desenhada" />
+    <img class="imgskt" src="../../assets/imagens/shape12.png" alt="Shape de skate DGK com Logo desenhada" />
     <h2>Shape DGK Logo</h2>
     <p>
       Shape DGK
@@ -81,7 +81,7 @@
 
   <section class="cards3">
       <div class="card7 aligncard">
-    <img class="imgskt" src="../imagens/rolamento.png" alt="Oito Rolamentos de skate vermelhos " />
+    <img class="imgskt" src="../../assets/imagens/rolamento.png" alt="Oito Rolamentos de skate vermelhos " />
     <h2>Kit 8 rolamentos</h2>
     <p>
       Rolamentos Black Star
@@ -92,7 +92,7 @@
   </div>
 
   <div class="card8 aligncard">
-    <img class="imgskt" src="../imagens/tenis.png" alt="Tenis branco da Adidas com linhas pretas" />
+    <img class="imgskt" src="../../assets/imagens/tenis.png" alt="Tenis branco da Adidas com linhas pretas" />
    
     <h2>Tênis Adidas</h2>
     <p>
@@ -104,7 +104,7 @@
   </div>
 
   <div class="card9 aligncard">
-    <img class="imgskt" src="../imagens/blusa.png" alt="Blusa de frio vermelha branca e preta Adidas" />
+    <img class="imgskt" src="../../assets/imagens/blusa.png" alt="Blusa de frio vermelha branca e preta Adidas" />
     <h2>Moleton Adidas</h2>
     <p>
      Blusa de Moleton Adidas

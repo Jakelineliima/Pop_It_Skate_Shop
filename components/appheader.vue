@@ -38,7 +38,7 @@
       <img
         class="logo"
         width="9%"
-        src="../components/imagens/logo.svg"
+        src="../assets/imagens/logo.svg"
         alt="logo da loja Pop-It Skate Shop"
       />
 
@@ -46,7 +46,7 @@
         <v-icon>mdi-home</v-icon>Inicial
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Skateboard">
-        <img class="skt" src="../components/imagens/skateboard.svg" alt="Icone de skateboard" /> Skateboard
+        <img class="skt" src="../assets/imagens/skateboard.png" alt="Icone de skateboard" /> Skateboard
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Roupas">
         <v-icon>mdi-hanger</v-icon>Roupas
@@ -65,7 +65,7 @@
       </div>
     </nav>
 
-    <v-bottom-navigation v-model="bottomNav" class="acessibilidade">
+    <v-bottom-navigation v-model="bottomNav" class="barra-acessibilidade-dir acessibilidade">
       <v-btn dark>
         <span >Contraste</span>
         <v-icon  >mdi-brightness-4</v-icon>
@@ -98,7 +98,7 @@
 import dropdown from "../components/dropdown.vue";
 import dropacessibilidade from "../components/dropacessibilidade.vue";
 export default {
-    name: "appheader",
+    name: "Appheader",
   components: {
     dropdown,
     dropacessibilidade
@@ -175,7 +175,7 @@ export default {
           return "indigo";
       }
     }
-  }
+  },
 }
 </script>
 

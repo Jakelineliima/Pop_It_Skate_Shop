@@ -1,9 +1,9 @@
 <template>
   <div class="sobre gridsobre">
-    <appheader class="menu"/>
+    <Appheader class="menu"/>
     <img
       class="banner"
-      src="../components/imagens/Banner Sobre.jpg"
+      src="../assets/imagens/Banner Sobre.jpg"
       longdesc="Homem andando de skate em um pista cercada por neve"
     />
 
@@ -19,7 +19,7 @@
       <h2>Pop-It sua skate shop Online de onde estiver.</h2>
     </div>
 
-    <img class="video" src="../components/imagens/Imagem 1.jpg" alt="Imagen do video " />
+    <img class="video" src="../assets/imagens/Imagem 1.jpg" alt="Imagen do video " />
   </div>
 </template>
 
@@ -72,12 +72,12 @@
 
 
 <script>
-import appheader from "../components/appheader.vue"
+import appheader from "../components/Appheader.vue"
 
 export default {
   name: "quemsomos",
   components:{
-appheader
+Appheader
   }
   
 };

@@ -6,7 +6,7 @@
       <div class="card1 aligncard">
         <img 
           class="imgskt"
-          src="../imagens/Calça Dc Shoes.jpg"
+          src="../../assets/imagens/Calça Dc Shoes.jpg"
           alt="Metade do corpo de um homen usando uma calça preta com a mão no bolso"
         />
         <h2>Calça DC</h2>
@@ -21,7 +21,7 @@
       <div class="card2 aligncard" id="card2">
         <img
           class="imgskt"
-          src="../imagens/Calça Indepent Fit Proud.jpg"
+          src="../../assets/imagens/Calça Indepent Fit Proud.jpg"
           alt="Metade do corpo de um homen usando uma calça caqui"
         />
         <h2>Calça Independent</h2>
@@ -36,7 +36,7 @@
       <div class="card3 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Calça Moleton.jpg"
+          src="../../assets/imagens/Calça Moleton.jpg"
           alt="Calça de moleton cor cinza"
         />
         <h2>Calça Matriz</h2>
@@ -51,7 +51,7 @@
 
     <section class="cards2">
       <div class="card4 aligncard">
-        <img class="imgskt" src="../imagens/camiseta grizzly.jpg" alt="Camiseta preta com um urso psicodelico desenhada" />
+        <img class="imgskt" src="../../assets/imagens/camiseta grizzly.jpg" alt="Camiseta preta com um urso psicodelico desenhada" />
         <h2>Camiseta Grizzly</h2>
         <p>
           Camiseta Grizzly Psicodelic
@@ -64,7 +64,7 @@
       <div class="card5 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Camiseta Nomad.jpg"
+          src="../../assets/imagens/Camiseta Nomad.jpg"
           alt="Camista preta desenhada em um circulo um homem e um camelo passando por uma cidade deserta"
         />
         <h2>Camiseta Nommad</h2>
@@ -79,7 +79,7 @@
       <div class="card6 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Camiseta Thrasher Flame.jpg"
+          src="../../assets/imagens/Camiseta Thrasher Flame.jpg"
           alt="Camiseta preta escrita Thrasher como se tivesse pegando fogo"
         />
         <h2>Camiseta Thrasher</h2>
@@ -98,7 +98,7 @@
       <div class="card7 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Regata Dc Shoes Combo.jpg"
+          src="../../assets/imagens/Regata Dc Shoes Combo.jpg"
           alt="Um homem usando uma regata de onça pintada "
         />
         <h2>Regata DC</h2>
@@ -113,7 +113,7 @@
       <div class="card8 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Regata Matriz Barra.jpg"
+          src="../../assets/imagens/Regata Matriz Barra.jpg"
           alt="Um homem usando uma regata preta"
         />
 
@@ -129,7 +129,7 @@
       <div class="card9 aligncard">
         <img
           class="imgskt"
-          src="../imagens/Shorts Rvca.png"
+          src="../../assets/imagens/Shorts Rvca.png"
           alt="Shorts vermelho com umas folhas psicodelica desenhada"
         />
         <h2>Shorts RVCA</h2>

@@ -1,18 +1,22 @@
 <template>
   <div class="tenis gridtenis">
-    <appheader/>
+    <Appheader />
     <img
       class="banner"
-      src="../components/imagens/Banner Tenis.jpg" longDesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "/>
+      src="../assets/imagens/Banner Tenis.jpg"
+      longdesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "
+    />
 
     <cardtenis class="card" />
     <div class="txt">
-      <p> Todo o conforto e estilo que seus pés merecem com um preço que cabe no seu bolso.
-        <br> <strong>  Pop-It
-</strong>,sua loja online , sempre pensando no seu conforto.
-
-</p>
+      <p>
+        Todo o conforto e estilo que seus pés merecem com um preço que cabe no seu bolso.
+        <br />
+        <strong>Pop-It</strong>
+,sua loja online , sempre pensando no seu conforto.
+      </p>
     </div>
+    <footer />
   </div>
 </template>
 
@@ -44,23 +48,23 @@
   padding: 57px;
   font-size: 18px;
 }
-@media(max-width: 924px){
-  .txt{
+@media (max-width: 924px) {
+  .txt {
     text-align: inherit;
   }
 }
-@media(max-width: 800px){
-  .banner{
-      margin-top: -4%;
-      width: 100%;
+@media (max-width: 800px) {
+  .banner {
+    margin-top: -4%;
+    width: 100%;
   }
-} 
+}
 
-@media(max-width: 300px){
-  .banner{
-   margin-top: 0;
+@media (max-width: 300px) {
+  .banner {
+    margin-top: 0;
   }
-  .txt{
+  .txt {
     text-align: inherit;
   }
 }
@@ -71,12 +75,14 @@
 // @ is an alias to /src
 
 import cardtenis from "../components/cards/cardtenis.vue";
-import appheader from "../components/appheader.vue"
+import Appheader from "../components/Appheader.vue";
+import rodape from "../components/rodape.vue";
 export default {
   name: "tenis",
   components: {
-    cardtenis,appheader
-    
+    cardtenis,
+    Appheader,
+    rodape
   }
 };
 </script>
