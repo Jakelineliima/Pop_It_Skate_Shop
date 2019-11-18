@@ -1,15 +1,23 @@
 <template>
     <div>
-    <div id="navigation">
+    <div id="navigation">  
+      <div>
+        <img
+        class="logo2"
+        width="9%"
+        src="../components/imagens/logo.svg"
+        alt="logo da loja Pop-It Skate Shop"
+      />
+      </div>
+      
       <v-navigation-drawer
         v-model="drawer"
         :mini-variant="miniVariant"
         :clipped="clipped"
-        fixed
-        color="#000"
         app
       >
-        <v-list>
+      
+        <v-list color="#000">
           <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
             <v-list-item-action color="#fff">
               <v-icon color="#fff">{{ item.icon }}</v-icon>
@@ -19,9 +27,11 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
+
       </v-navigation-drawer>
 
-      <v-app-bar :clipped-left="clipped" fixed app color="#000">
+     
+      <v-app-bar :clipped-left="clipped" fixed app color="#000" class="menu1">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="#fff" />
         <v-btn icon @click.stop="miniVariant = !miniVariant" color="#fff">
           <v-icon color="#fff">mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
@@ -38,7 +48,7 @@
       <img
         class="logo"
         width="9%"
-        src="../assets/imagens/logo.svg"
+        src="../components/imagens/logo.svg"
         alt="logo da loja Pop-It Skate Shop"
       />
 
@@ -46,7 +56,7 @@
         <v-icon>mdi-home</v-icon>Inicial
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Skateboard">
-        <img class="skt" src="../assets/imagens/skateboard.png" alt="Icone de skateboard" /> Skateboard
+        <img class="skt" src="../components/imagens/skateboard.svg" alt="Icone de skateboard" /> Skateboard
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Roupas">
         <v-icon>mdi-hanger</v-icon>Roupas
@@ -65,18 +75,20 @@
       </div>
     </nav>
 
-    <v-bottom-navigation v-model="bottomNav" class="barra-acessibilidade-dir acessibilidade">
-      <v-btn dark>
+    <v-bottom-navigation v-model="bottomNav" class="acessibilidade" >
+    
+
+      <v-btn dark  >
         <span >Contraste</span>
         <v-icon  >mdi-brightness-4</v-icon>
       </v-btn>
 
-      <v-btn dark>
+      <v-btn dark  >
         <span>Aumentar letra</span>
         <v-icon>mdi-format-font-size-increase</v-icon>
       </v-btn>
 
-      <v-btn dark>
+      <v-btn dark >
         <span>Diminuir letra</span>
         <v-icon>mdi-format-font-size-decrease</v-icon>
       </v-btn>
@@ -89,7 +101,14 @@
         <span>Vlibras</span>
         <v-icon>mdi-hand-right</v-icon>
       </v-btn>
+       
+  
     </v-bottom-navigation>
+    
+
+
+
+
     </div>
 </template>
 
@@ -97,11 +116,13 @@
 
 import dropdown from "../components/dropdown.vue";
 import dropacessibilidade from "../components/dropacessibilidade.vue";
+
 export default {
-    name: "Appheader",
+    name: "appheader",
   components: {
     dropdown,
-    dropacessibilidade
+    dropacessibilidade,
+    
   },
   data() {
     return {
@@ -161,21 +182,8 @@ export default {
       right: true,
       rightDrawer: false
     };
-  },
-  computed: {
-    color() {
-      switch (this.bottomNav) {
-        case 0:
-          return "blue-grey";
-        case 1:
-          return "teal";
-        case 2:
-          return "brown";
-        case 3:
-          return "indigo";
-      }
-    }
-  },
+  },  
+ 
 }
 </script>
 
@@ -232,6 +240,9 @@ p {
 .dropacessiblidade {
   display: none;
 }
+.menu1{
+  margin-top: 16%;
+}
 @media (max-width: 360px) {
   .acessibilidade {
     margin-top: 10%;
@@ -260,9 +271,9 @@ p {
   .acessibilidade {
     display: none;
   }
-  .dropacessiblidade {
+  .alinhardropmenu {
     display: block;
-    margin-left: 570px;
+    margin-left: 72%;
   }
 }
 </style>

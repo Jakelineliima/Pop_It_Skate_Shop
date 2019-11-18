@@ -1,9 +1,9 @@
 <template>
   <div class="sobre gridsobre">
-    <Appheader class="menu"/>
+    <appheader class="menu"/>
     <img
       class="banner"
-      src="../assets/imagens/Banner Sobre.jpg"
+      src="../components/imagens/Banner Sobre.jpg"
       longdesc="Homem andando de skate em um pista cercada por neve"
     />
 
@@ -19,7 +19,8 @@
       <h2>Pop-It sua skate shop Online de onde estiver.</h2>
     </div>
 
-    <img class="video" src="../assets/imagens/Imagem 1.jpg" alt="Imagen do video " />
+    <img class="video" src="../components/imagens/Imagem 1.jpg" alt="Imagen do video " />
+    <rodape class="rodape"/>
   </div>
 </template>
 
@@ -56,6 +57,10 @@
   padding: 57px;
   font-size: 17px;
 }
+.rodape{
+  grid-column: 1/4;
+  grid-row: 8/9;
+}
 @media (max-width: 924px) {
   .txt {
     text-align: inherit;
@@ -72,12 +77,12 @@
 
 
 <script>
-import appheader from "../components/Appheader.vue"
-
+import appheader from "../components/appheader.vue"
+import rodape from "../components/rodape.vue"
 export default {
   name: "quemsomos",
   components:{
-Appheader
+appheader,rodape
   }
   
 };

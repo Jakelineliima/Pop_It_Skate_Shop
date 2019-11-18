@@ -1,20 +1,15 @@
-rodape<template>
+<template>
   <div class="roupas gridroupas">
-    <Appheader class="menu" />
+    <appheader class="menu"/>
     <img
       class="banner"
-      src="../assets/imagens/Banner Roupas.jpg"
-      longdesc="Um jovem andando de skate em um lugar abandonado"
-    />
+      src="../components/imagens/Banner Roupas.jpg" longDesc="Um jovem andando de skate em um lugar abandonado"/>
 
     <cardroupa class="card" />
     <div class="txt">
-      <p>
-        Você sempre confortável de onde estiver com os produtos da
-        <strong>Pop-It Itápolis</strong>
-      </p>
+     <p>Você sempre confortável de onde estiver com os produtos da <strong>Pop-It Itápolis</strong> </p>
     </div>
-    <footer />
+    <rodape class="rodape"/>
   </div>
 </template>
 
@@ -28,8 +23,10 @@ rodape<template>
 .roupas {
   grid-column: 1/4;
 }
-.menu {
+.menu{
   grid-column: 1/4;
+ 
+
 }
 .banner {
   grid-column: 1/4;
@@ -49,28 +46,31 @@ rodape<template>
   padding: 57px;
   font-size: 18px;
 }
-@media (max-width: 924px) {
-  .txt {
-    text-align: justify;
+.rodape{
+  grid-column: 1/4;
+  grid-row: 8/9;
+}
+@media(max-width: 924px){
+  .txt{
+    text-align: justify
   }
 }
-@media (max-width: 800px) {
-  .banner {
-    margin-top: 4%;
+@media(max-width: 800px){
+  .banner{
+  margin-top: 4%;
   }
 }
 </style>
 
 <script>
-import cardroupa from "../components/cards/cardroupa.vue";
-import Appheader from "../components/Appheader.vue";
-import rodape from "../components/rodape.vue";
+import cardroupa from "../components/cards/cardroupa.vue"
+import appheader from "../components/appheader.vue"
+import rodape from "../components/rodape.vue"
+
 export default {
-  name: "roupas",
-  components: {
-    cardroupa,
-    Appheader,
-    rodape
-  }
-};
+    name:"roupas",
+    components: {
+        cardroupa,appheader,rodape
+    }
+}
 </script>

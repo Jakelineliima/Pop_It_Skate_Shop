@@ -7,6 +7,7 @@
       :items="usuarios"
       sort-by="nome"
       class="elevation-1"
+      :hide-default-footer="true"
     >
       <template v-slot:top>
         <v-toolbar flat color="white">
@@ -15,22 +16,22 @@
           <v-btn color="primary" dark class="mb-2" v-on="on" nuxt to="/adm/usuarios/incluir" >Incluir</v-btn>
         </v-toolbar>
       </template>
-      <template v-slot:item.action="{ item }">
+       <template v-slot:item.action="{ item }">
         <v-icon
-          small
+          color="primary"
           class="mr-2"
           @click="editar(item)"
         >
           mdi-pencil
         </v-icon>
         <v-icon
-          small
+          color="pink"
           @click="excluir(item)"
-          to="adm/usuarios/lista"
         >
           mdi-delete
         </v-icon>
       </template>
+     
       <template v-slot:no-data>
         Não há registros cadastrados!
       </template>
@@ -46,7 +47,7 @@ export default {
       headers: [
         { text: 'Nome', value: 'name' },
         { text: 'Email', value: 'email' },
-        { text: 'Ações', value: 'action', sortable: false }
+        { text: 'Ações', value: 'action', sortable: false,width: 100  }
       ],
 
       usuarios: []
@@ -58,18 +59,17 @@ export default {
     if (usuarios) this.usuarios = usuarios
   },
 
+ 
   methods: {
     editar (item) {
-      this.$router.push(`/admin/usuarios/${item.id}`) /*navega pra outra tela*/
+      this.$router.push(`/adm/usuarios/${item.id}`)
     },
-    excluir (item){
-      this.$delete.push(`/admin/usuarios/${item.id}`)
-      let usuarios = this.$ls.get('usuarios')
-      usuarios = usuarios.filter(u => u.id |= item.id)
-      this.$ls.set('usuarios',usuarios)
-      this.usuarios = usuarios
 
-
+    excluir (item) {
+      let dados = this.$ls.get('usuarios')
+      dados = dados.filter(u => u.id != item.id)
+      this.$ls.set('usuarios', dados)
+      this.usuarios = dados
     }
   }
 }

@@ -1,36 +1,71 @@
-<template> 
-<div>
-    <div  id="app" class="alinhar">
-      <v-menu offset-y>
-        <template v-slot:activator="{ on }">
-          <v-btn id="btn"
-            color="#000"
-            dark
-            v-on="on"
-            class="btn"
-          >
-            Configurações
-          </v-btn>
-        </template>
-        <v-list>
-          <v-list-item
-            v-for="(item, index) in items"
-            :key="index"
-            @click="clicar"
-          >
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </div>
-  <div class="alinhar">
-<cards id="card"/>
- <lista class="lista"/>
-  </div>
+<template>  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+      clipped
+    >
+      <v-list dense>
+        <v-list-item @click="">
+          <v-list-item-action>
+            <v-icon>mdi-dashboard</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Dashboard</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item @click="">
+          <v-list-item-action>
+            <v-icon>mdi-settings</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>Settings</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      app
+      clipped-left
+      class="d-flex justify-contend-around"
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Painel Administrativo - Pop-It Skate Shop</v-toolbar-title>
+      <v-btn to="/"><v-icon to="/index"> mdi-reply
+      </v-icon> <p>Voltar para o site.</p></v-btn>
+     
+    </v-app-bar>
+
+    <v-content>
+      <v-container
+        fluid
+        fill-height
+      >
+        <v-layout
+          align-center
+          justify-center
+          class="alinhar"
+        >
+
+        <cards/>
+        <lista class="lista"/>
+          <v-flex shrink>
+     
+          
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
+
+    <v-footer app>
+      <span>&copy; 2019</span>
+    </v-footer>
+  </v-app>
 
 
 
-</div>
+
+
 </template>
 
 
@@ -43,17 +78,15 @@ import lista from "../adm/usuarios/lista.vue"
     name:'dashboard',
     components:{
         cards,lista
-    },
-
-
+    }, 
+  
+    theme: { dark: true },
   data: () => ({
-    items: [
-      { title: 'Clientes' },
-      { title: 'Produtos' },
-      { title: 'Estátisticas' },
-      { title: 'Ir para o site Pop-It' },
-    ],
-  }),
+    drawer: null,
+  })
+
+
+
 
 
  }
@@ -71,6 +104,7 @@ justify-content: left;
 .lista{
   grid-column: 1/5;
   grid-row: auto;
+  margin-top: 25px;
 }
 
 .btn{

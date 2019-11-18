@@ -1,56 +1,77 @@
 <template>
-  <v-footer color="#000">
-    <v-col cols="12">
-      <v-card color="#fff" class="txtrodape">
-        <p class="text-center pt-2">Av. Capitão Venancio N° 1558 Centro Itápolis-SP</p>
+ 
+
+    <v-footer
+      padless
+      dark
+      
+      
+    >
+      <v-card
+        class="flex"
+        flat
+        tile
+      >
+        <v-card-title class="dark rodape">
+          <strong class="subheading">Av. Capitão Venâncio N° 1553 Centro Itápolis-SP</strong>
+  
+          <v-spacer></v-spacer>
+  <dropdown/>
+  <v-spacer></v-spacer>
+  <div class="social">
+          <v-btn
+            v-for="icon in icons"
+            :key="icon"
+            class="mx-4"
+            dark
+            icon
+            
+            
+          >
+            <v-icon  size="24px">{{ icon }}</v-icon>
+          </v-btn>
+          </div>
+        </v-card-title>
+  
+        <v-card-text class="py-2 white--text text-center">
+          {{ new Date().getFullYear() }} — <strong>Pop-It Skate Shop sua skate shop on-line</strong>
+        </v-card-text>
       </v-card>
-      <div class="d-flex justify-space-around align-items-center rodape">
-        <div class="dropbtn">
-          <dropdown />
-        </div>
-
-        <v-card color="#000" class="social">
-          <v-card-title class="titulo">Redes Sociais</v-card-title>
-          <a>Facebook</a>
-          <a>Instagram</a>
-          <a>Whatsapp</a>
-        </v-card>
-      </div>
-    </v-col>
-  </v-footer>
+    </v-footer>
+ 
 </template>
-
 <script>
-import dropdown from "../components/dropdown.vue";
+import dropdown from "./dropdown.vue"
 export default {
-  name: "rodape",
-  components: {
-    dropdown
-  }
-};
+    name:'rodape',
+    components:{
+        dropdown
+    },
+      data: () => ({
+    icons: [
+      'mdi-facebook',
+      'mdi-linkedin',
+      'mdi-instagram',
+      'mdi-whatsapp',
+    ],
+  }),
+}
 </script>
 <style scoped>
-.dropbtn {
-  margin-top: 24px;
+.rodape{
+  background: #000;
+  
 }
+@media(max-width:850px){
+    .rodape{
+        display: flex;
+        flex-direction: column;
 
-.social,
-.social a {
-  color: #fff;
+    }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-@media (max-width: 360px) {
-  .rodape {
-    flex-wrap: wrap;
-  }
-
-  .txtrodape {
-    height: 70px;
-  }
-}
+    .social{
+        display: flex;
+        flex-direction: row;
+    }
+    }
 </style>

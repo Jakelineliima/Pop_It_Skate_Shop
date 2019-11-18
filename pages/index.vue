@@ -1,34 +1,40 @@
-<template>
-  <div class="home gridhome">
-    <Appheader class="menu"/>
-    
+<template >
+
+
+  <div class="home gridhome"> 
+     
+<appheader class="menu"/>
     <img
       class="banner"
-      src="../assets/imagens/Banner inicial.jpg"
-      longdesc="Skate Park com varias pessoas andando de skate e conversando"
-    />
+      src="../components/imagens/Banner inicial.jpg" longDesc="Skate Park com varias pessoas andando de skate e conversando"/>
+
+
     <card class="card" />
     <div class="txt">
       <p>
-        Na
-        <strong>Pop-It</strong> você encontra os melhores produtos com descontos e marcas que você procura.
-        <br />
-        <br />
+        Na <strong>Pop-It</strong> você encontra os melhores produtos com descontos e marcas que você procura.
+        <br>
+        <br>
         <strong>Skates, Roupas, Tênis e Acessórios Pop It</strong>
       </p>
+      
+  
     </div>
-    <footer class="rodape"/>
+    <rodape class="rodape"/>
   </div>
+
 </template>
 
 <style scoped>
+
 .gridhome {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr  1fr  1fr ;
   grid-template-rows: auto;
+  
 }
 
-.menu {
+.menu{
   grid-column: 1/4;
 }
 
@@ -37,7 +43,7 @@
   grid-row: 2/3;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: center
 }
 
 .card {
@@ -46,49 +52,64 @@
   margin-top: 20px;
 }
 
-.txt {
+.txt{
   grid-column: 1/4;
   grid-row: 7/8;
   text-align: center;
   padding: 57px;
   font-size: 18px;
 }
+.rodape{
+  grid-column: 1/4;
+  grid-row: 8/9;
+}
+@media(max-width: 924px){
+  .txt{
+    text-align: inherit;
+  }
+  
+}
+@media(max-width: 800px){
+  .banner{
+    
+      width: 100%;
+  }
+} 
 
-@media (max-width: 924px) {
-  .txt {
+@media(max-width: 360px){
+  .banner{
+   margin-top: 28px;
+  }
+  .txt{
     text-align: inherit;
   }
 }
-@media (max-width: 800px) {
-  .banner {
-    margin-top: -4%;
-    width: 100%;
-  }
-}
 
-@media (max-width: 360px) {
-  .banner {
-    margin-top: 0;
-  }
-  .txt {
-    text-align: inherit;
-  }
-}
 </style>
 
 
 <script>
 // @ is an alias to /src
-import Appheader from "../components/Appheader.vue";
-import card from "../components/cards/card.vue";
-import rodape from "../components/rodape.vue";
+import appheader from "../components/appheader.vue"
+import card from "../components/cards/card.vue"
+import rodape from "../components/rodape.vue"
+
+
 
 export default {
   name: "home",
   components: {
-    card,
-    Appheader,
-    rodape
-  }
-};
+    card,appheader,rodape,
+
+  },
+   metaInfo: {
+      title: 'Pagina Inicial',
+      titleTemplate: '%s - Yay!',
+      htmlAttrs: {
+        lang: 'pt-br',
+        amp: true
+      }
+    }
+}
+
 </script>

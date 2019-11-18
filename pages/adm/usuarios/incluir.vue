@@ -1,5 +1,6 @@
 <template>
-
+<v-app>
+  <appheader/>
 <v-form>
   <v-container>
     <v-col cols="12"  md="3" text-center>
@@ -34,29 +35,35 @@
             ></v-text-field>
           </v-col>
           <button @click="salvar">Salvar</button>
+          <v-alert transition="scale-transition" type="error" :value="!!alert">{{alert}}</v-alert>
   </v-container>
 </v-form>
-
+</v-app>
   
 </template>
 
 <script>
+import appheader from "../../../components/appheader.vue"
 export default {
+  components:{
+   appheader
+  },
   data () {
     return {
       name: '',
       nameRules: [
-      v => !!v || 'Name is required'],
+      v => !!v || 'O nome é necessario.'],
 
       email: '',
       emailRules: [
-      v => !!v || 'E-mail is required',
+      v => !!v || 'E-mail é necessario',
      
     ],
       password: '',
       passwordRules:[
     v => !!v || 'Digite sua senha!',
     ], 
+    alert:''
     }
   },
 
@@ -72,13 +79,15 @@ export default {
       if (usuarios) {
         dados.id = usuarios.length + 1
         usuarios.push(dados)
+        this.$router.push('/adm/usuarios/lista')
+        this.$ls.set('usuarios', usuarios)
       } else {
         dados.id = 1
         usuarios = [ dados ]
+        this.alert = "Não há dados registrados!"
       }
-      this.$ls.set('usuarios', usuarios)
+      
 
-      this.$router.push(`/adm/usuarios/lista`)
     }
   }
 }
