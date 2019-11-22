@@ -5,18 +5,55 @@ module.exports = {
   /*
   ** Headers of the page
   */
-head: {
-  titleTemplate: '%s - ' + process.env.npm_package_name,
-  title: process.env.npm_package_name || '',
-  meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-  ],
-  link: [
-    { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-  ],
-},
+  head: {
+    titleTemplate: '%s - ' + process.env.npm_package_name,
+    title: process.env.npm_package_name || '',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+    ],
+
+    metaInfo: {
+     
+      meta: [
+        
+        // OpenGraph data (Most widely used)
+        {property: 'og:title', content: 'Inicio | Pop-It Skate Shop'},
+        {property: 'og:site_name', content: 'Pop-It'},
+        // The list of types is available here: http://ogp.me/#types
+        {property: 'og:type', content: 'website'},
+        // Should the the same as your canonical link, see below.
+        {property: 'og:url', content: 'http://localhost:3000/'},
+        {property: 'og:image', content: 'http://localhost:3000/logo.svg',},
+        // Often the same as your meta description, but not always.
+        {property: 'og:description', content: 'Seja bem vindo na Pop-It Skate Shop'},
+    
+        // Facebook card
+        {name: 'facebook:card', content: 'summary'},
+        {name: 'facebook:site', content: 'http://localhost:3000/'},
+        {name: 'facebook:title', content: 'Inicio | Pop-It Skate Shop'},
+        {name: 'facebook:description', content: 'Seja bem vindo a Pop-It Skate Shop'},
+       
+        
+        // Instagram card
+        {name: 'instagram:card', content: 'summary'},
+        {name: 'instagram:site', content: 'http://localhost:3000/'},
+        {name: 'instagram:title', content: 'Inicio | Pop-It Skate Shop'},
+        {name: 'instagram:description', content: 'Seja bem vindo a Pop-It Skate Shop'},
+    
+     
+        // whatsapp card
+        {name: 'whatsapp:card', content: 'summary'},
+        {name: 'whatsapp:site', content: 'http://localhost:3000/'},
+        {name: 'whatsapp:title', content: 'Inicio | Pop-It Skate Shop'},
+        {name: 'whatsapp:description', content: 'Seja bem vindo a Pop-It Skate Shop'},
+      
+    
+      ]
+    }
+
+  },
   /*
   ** Customize the progress-bar color
   */

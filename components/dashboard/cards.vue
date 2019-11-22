@@ -1,6 +1,6 @@
 <template>
     <v-card
-      class="mx-auto"
+      class="mx-auto container"
       max-width="400"
     >
      
@@ -8,7 +8,7 @@
   
       <v-card-title class="pb- text-center">Adicionar produtos</v-card-title>
   
-      <v-card-text class="text--primary">
+      <v-card-text class="text--black">
         <div></div>
   
         <div>Adicione seus produtos novos</div>
@@ -23,16 +23,19 @@
   
       <v-card-actions>
         <v-btn
-          color="#fff"
+          color="#151515"
+          class="black--text cor"
           text
         >
           Excluir
         </v-btn>
   
         <v-btn
-          color="#fff"
+    
           text
-        >  <v-file-input label="File input"></v-file-input>
+          class="black--text cor2"
+
+        >  <v-file-input label="File input" ></v-file-input>
           Adicionar
         </v-btn>
       </v-card-actions>
@@ -44,5 +47,13 @@ export default {
 }
 </script>
 <style scoped>
-
+.container{
+   box-shadow: 0px 0px 6px -2px #000;
+}
+.cor{
+  background: rgb(138, 136, 136);
+}
+.cor2{
+  border: 1px solid #000;
+}
 </style>

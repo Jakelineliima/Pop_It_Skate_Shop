@@ -11,7 +11,7 @@
             label="Nome completo"
             required />
 
-          
+      
 
           <v-text-field
             v-model="email"
@@ -52,21 +52,26 @@ export default {
       id: this.$route.params.id,
       modo: this.$route.params.id == 'incluir' ? 'Incluir' : 'Editar',
       nome: '',
+    
       email: '',
       senha: '',
       valid: true,
       nomeRegras: [
         v => !!v || 'Nome completo é obrigatório',
-        v => (v && v.length <= 50) || 'Nome completo deve ter no máximo 15caracteres'
+       
+      ],
+      apelidoRegras: [
+        v => !!v || 'Apelido é obrigatório',
+        
       ],
       emailRegras: [
         v => !!v || 'E-mail é obrigatório',
-        v => (v && v.length <= 100) || 'E-mail deve ter no máximo 25 caracteres',
+        v => (v && v.length <= 100) || 'E-mail deve ter no máximo 100 caracteres',
         v => /.+@.+\..+/.test(v) || 'E-mail deve ter um formato válido'
       ],
       senhaValidacao: [
         v => this.modo == 'Incluir' && (!!v || 'Senha é obrigatória'),
-        v => this.modo == 'Incluir' && ((v && v.length <= 100) || 'Senha deve ter no máximo 8 caracteres')
+        v => this.modo == 'Incluir' && ((v && v.length <= 100) || 'Senha deve ter no máximo 50 caracteres')
       ]
     }
   },
@@ -77,6 +82,7 @@ export default {
       const usuario = usuarios.find(u => u.id == this.id)
       if (usuario) {
         this.nome = usuario.nome
+        this.apelido = usuario.apelido
         this.email = usuario.email
       }
     }

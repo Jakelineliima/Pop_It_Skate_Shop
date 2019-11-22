@@ -1,22 +1,15 @@
 <template>
-    <div>
-    <div id="navigation">  
-      <div>
-        <img
-        class="logo2"
-        width="9%"
-        src="../components/imagens/logo.svg"
-        alt="logo da loja Pop-It Skate Shop"
-      />
-      </div>
-      
-      <v-navigation-drawer
+  <div>
+    <div id="navigation">
+      <div></div>
+
+      <v-navigation-drawer height="351px"
         v-model="drawer"
         :mini-variant="miniVariant"
         :clipped="clipped"
         app
+        class="menu"
       >
-      
         <v-list color="#000">
           <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
             <v-list-item-action color="#fff">
@@ -27,20 +20,24 @@
             </v-list-item-content>
           </v-list-item>
         </v-list>
-
       </v-navigation-drawer>
 
-     
-      <v-app-bar :clipped-left="clipped" fixed app color="#000" class="menu1">
+      <v-app-bar :clipped-left="clipped" app color="#000" class="menu1">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" color="#fff" />
         <v-btn icon @click.stop="miniVariant = !miniVariant" color="#fff">
           <v-icon color="#fff">mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
         </v-btn>
-        
-        <div class="alinhardropmenu">
+
       
-          <dropacessibilidade />
-       </div>
+        <div class="alinhardropmenu">
+            <img
+          class="logo2"
+          width="64px"
+          src="../assets/imagens/logo.svg"
+          alt="logo da loja Pop-It Skate Shop"
+        />
+          <dropacessibilidade class="btn" />
+        </div>
       </v-app-bar>
     </div>
 
@@ -48,7 +45,7 @@
       <img
         class="logo"
         width="9%"
-        src="../components/imagens/logo.svg"
+        src="../assets/imagens/logo.svg"
         alt="logo da loja Pop-It Skate Shop"
       />
 
@@ -56,7 +53,7 @@
         <v-icon>mdi-home</v-icon>Inicial
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Skateboard">
-        <img class="skt" src="../components/imagens/skateboard.svg" alt="Icone de skateboard" /> Skateboard
+        <img class="skt" src="../assets/imagens/skateboard.svg" alt="Icone de skateboard" /> Skateboard
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/Roupas">
         <v-icon>mdi-hanger</v-icon>Roupas
@@ -68,27 +65,25 @@
         <v-icon>mdi-necklace</v-icon>Acessórios
       </v-btn>
       <v-btn class="botao" color="#000" nuxt to="/sobre">
-        <v-icon>mdi-necklace</v-icon>Sobre
+        <v-icon>mdi-information-outline</v-icon>Sobre
       </v-btn>
       <div class="drop">
         <dropdown />
       </div>
     </nav>
 
-    <v-bottom-navigation v-model="bottomNav" class="acessibilidade" >
-    
-
-      <v-btn dark  >
-        <span >Contraste</span>
-        <v-icon  >mdi-brightness-4</v-icon>
+    <v-bottom-navigation v-model="bottomNav" class="acessibilidade" id="myapp">
+      <v-btn dark>
+        <span>Contraste</span>
+        <v-icon>mdi-brightness-4</v-icon>
       </v-btn>
 
-      <v-btn dark  >
+      <v-btn dark>
         <span>Aumentar letra</span>
         <v-icon>mdi-format-font-size-increase</v-icon>
       </v-btn>
 
-      <v-btn dark >
+      <v-btn dark>
         <span>Diminuir letra</span>
         <v-icon>mdi-format-font-size-decrease</v-icon>
       </v-btn>
@@ -101,28 +96,19 @@
         <span>Vlibras</span>
         <v-icon>mdi-hand-right</v-icon>
       </v-btn>
-       
-  
     </v-bottom-navigation>
-    
-
-
-
-
-    </div>
+  </div>
 </template>
 
 <script>
-
 import dropdown from "../components/dropdown.vue";
 import dropacessibilidade from "../components/dropacessibilidade.vue";
 
 export default {
-    name: "appheader",
+  name: "appheader",
   components: {
     dropdown,
-    dropacessibilidade,
-    
+    dropacessibilidade
   },
   data() {
     return {
@@ -155,36 +141,27 @@ export default {
         {
           icon: "mdi-necklace",
           title: "Acessórios",
-          to: "/Acessórios"
+          to: "/acessorios"
         },
         {
-          icon: "mdi-notebook",
+          icon: "mdi-info-outline",
           title: "Sobre",
-          to: "/Sobre"
+          to: "/sobre"
         },
         {
           icon: "mdi-view-dashboard",
           title: "Administração",
-          to: "/dashboard"
+          to: "/adm/usuarios/login"
         },
-        {
-          icon: "mdi-account",
-          title: "Login",
-          to: "/login"
-        },
-        {
-          icon: "mdi-account",
-          title: "Cadastro",
-          to: "/login"
-        }
+      
+    
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false
     };
-  },  
- 
-}
+  }
+};
 </script>
 
 <style scoped>
@@ -240,9 +217,10 @@ p {
 .dropacessiblidade {
   display: none;
 }
-.menu1{
+.menu1 {
   margin-top: 16%;
 }
+
 @media (max-width: 360px) {
   .acessibilidade {
     margin-top: 10%;
@@ -255,6 +233,14 @@ p {
   }
   .txtrodape {
     height: 70px;
+  }
+  .menu {
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .btn{
+    margin-left: 19px;
   }
 }
 
@@ -272,8 +258,11 @@ p {
     display: none;
   }
   .alinhardropmenu {
-    display: block;
-    margin-left: 72%;
+    align-items: center;
+    display: flex;
+  }
+  .logo2 {
+    width: 62px;
   }
 }
 </style>

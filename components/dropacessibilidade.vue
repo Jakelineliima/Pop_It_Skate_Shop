@@ -23,6 +23,7 @@ export default {
       
     items: [
       {
+        icon:"mdi-brightness-4",
         title: "Contraste",
         to:""
       },

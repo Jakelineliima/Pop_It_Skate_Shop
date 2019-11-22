@@ -3,7 +3,7 @@
     <appheader class="menu"/>
     <img
       class="banner"
-      src="../components/imagens/Banner Sobre.jpg"
+      src="../assets/imagens/Banner Sobre.jpg"
       longdesc="Homem andando de skate em um pista cercada por neve"
     />
 
@@ -19,7 +19,7 @@
       <h2>Pop-It sua skate shop Online de onde estiver.</h2>
     </div>
 
-    <img class="video" src="../components/imagens/Imagem 1.jpg" alt="Imagen do video " />
+    <video class="video" src="../assets/imagens/Pop-It Skate Shop.mp4"></video>
     <rodape class="rodape"/>
   </div>
 </template>
@@ -68,7 +68,7 @@
 }
 @media (max-width: 800px) {
   .banner {
-    margin-top: -4%;
+    margin-top: 55px;
   }
 }
 
@@ -83,6 +83,27 @@ export default {
   name: "quemsomos",
   components:{
 appheader,rodape
+  },
+  
+   
+   metaInfo: {
+    // Children can override the title.
+    title: "Sobre a Pop-It",
+    titleTemplate: "Sobre a <- Pop-It",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        name: "description",
+        content:
+          "Pop-it Skate shop é uma loja fundada em Itápolis com o intuito de proporcionando comodidade e conforto aos clientes. "
+      }
+    ]
   }
   
 };

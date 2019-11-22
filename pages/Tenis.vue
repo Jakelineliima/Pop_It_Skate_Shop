@@ -3,7 +3,7 @@
     <appheader class="menu"/>
     <img
       class="banner"
-      src="../components/imagens/Banner Tenis.jpg" longDesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "/>
+      src="../assets/imagens/Banner Tenis.jpg" longDesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "/>
 
     <cardtenis class="card" />
     <div class="txt">
@@ -59,15 +59,12 @@
 }
 @media(max-width: 800px){
   .banner{
-      margin-top: -4%;
+      margin-top: 55px;
       width: 100%;
   }
 } 
 
 @media(max-width: 300px){
-  .banner{
-   margin-top: 0;
-  }
   .txt{
     text-align: inherit;
   }
@@ -87,6 +84,26 @@ export default {
   components: {
     cardtenis,appheader,rodape
     
+  },
+   
+   metaInfo: {
+    // Children can override the title.
+    title: "Tênis a Pop-It",
+    titleTemplate: "Tênis <- Pop-It",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        name: "description",
+        content:
+          "Pop-it Skate shop é uma loja fundada em Itápolis com o intuito de proporcionando comodidade e conforto aos clientes.Todo o conforto e estilo que seus pés merecem com um preço que cabe no seu bolso."
+      }
+    ]
   }
 };
 </script>

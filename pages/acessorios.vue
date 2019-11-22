@@ -1,18 +1,21 @@
 <template>
   <div class="acessorios gridacessorios">
-    <appheader class="menu"/>
+    <appheader class="menu" />
     <img
       class="banner"
-      src="../components/imagens/Banner acessorios.jpg" longDesc="Skate Park com varias pessoas andando de skate e conversando"/>
+      src="../assets/imagens/Banner acessorios.jpg"
+      longdesc="Skate Park com varias pessoas andando de skate e conversando"
+    />
 
     <cardacessorio class="card" />
     <div class="txt">
       <p>
-        Na <strong>Pop-It</strong> você encontra acessórios com os melhores preços.
-  
+        Na
+        <strong>Pop-It</strong>
+ você encontra acessórios com os melhores preços.
       </p>
     </div>
-    <rodape class="rodape"/>
+    <rodape class="rodape" />
   </div>
 </template>
 
@@ -25,11 +28,11 @@
 .acessorios {
   grid-column: 1/4;
 }
-.menu{
+.menu {
   grid-column: 1/4;
 }
 
-.rodape{
+.rodape {
   grid-column: 1/4;
   grid-row: 8/9;
 }
@@ -52,19 +55,16 @@
   padding: 57px;
   font-size: 18px;
 }
-@media(max-width: 924px){
-  .txt{
-    text-align: justify
+@media (max-width: 924px) {
+  .txt {
+    text-align: justify;
   }
 }
-@media(max-width: 800px){
-  .banner{
-  margin-top: 4%;
+@media (max-width: 800px) {
+  .banner {
+    margin-top: 55px;
   }
- 
-  
 }
-
 </style>
 
 
@@ -72,14 +72,35 @@
 // @ is an alias to /src
 
 import cardacessorio from "../components/cards/cardacessorio.vue";
-import appheader from "../components/appheader.vue"
-import rodape from "../components/rodape.vue"
+import appheader from "../components/appheader.vue";
+import rodape from "../components/rodape.vue";
 
 export default {
   name: "acessorios",
   components: {
     cardacessorio,
-    appheader,rodape
+    appheader,
+    rodape
+  },
+
+  metaInfo: {
+    // Children can override the title.
+    title: "Acessorios Pop-It",
+    titleTemplate: "Acessórios <- Pop-It",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        name: "description",
+        content:
+          "Na Pop-It você encontra acessórios com os melhores preços."
+      }
+    ]
   }
 };
 </script>

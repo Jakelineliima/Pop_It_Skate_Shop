@@ -6,7 +6,7 @@
   <section class="cards" id="card">
 
    <div class="card1 aligncard">
-    <img  class="imgskt" src="../../assets/imagens/tenis Nike Sb.jpg" alt="Shape de skate com uma lamborguine desenhada" />
+    <img  class="imgskt" src="../../assets/imagens/tenis Nike Sb.jpg" alt="Tênis Nike preto" />
     <h2>Tênis Nike</h2>
     <p>
       Tênis Nike SB Air
@@ -17,8 +17,8 @@
   </div> 
  
   <div class="card2 aligncard" id="card2">
-    <img class="imgskt" src="../../assets/imagens/Tenis Stefan.jpg" alt="Camiseta Elemente cinza com uma arvore andando de skate" />
-    <h2>Tênis Nike SB Stevan Janovsky</h2>
+    <img class="imgskt" src="../../assets/imagens/Tenis Stefan.jpg" alt="Tênis Nike com textura de pele de cobra" />
+    <h2>Tênis Nike SB</h2>
     <p>
       Tênis Nike SB Stevan Janovsky
       <br />
@@ -28,7 +28,7 @@
   </div>
 
    <div class="card3 aligncard">
-    <img width="224px" class="imgskt" src="../../assets/imagens/Tenis team.jpg" alt="Camiseta Thrasher Ande de skate e va para a prisão" />
+    <img width="224px" class="imgskt" src="../../assets/imagens/Tenis team.jpg" alt="Tênis Nike branco" />
     <h2>Tênis Nike</h2>
     <p>
        Tênis Nike SB Teen Classic
@@ -43,7 +43,7 @@
    <section class="cards2">
      
     <div class="card4 aligncard">
-    <img class="imgskt" src="../../assets/imagens/Tenis Nike Zoom.jpg" alt="Camiseta branca da marca RVCA" />
+    <img class="imgskt" src="../../assets/imagens/Tenis Nike Zoom.jpg" alt="Tênis Nike preto com o simbolo branco" />
     <h2>Tênis Nike </h2>
     <p>
       Tênis Nike SB Zoom
@@ -54,7 +54,7 @@
   </div>
 
   <div class="card5 aligncard">
-    <img width="220px" class="imgskt" src="../../assets/imagens/Tenis vans c.jpg" alt="Bermuda Listrada de tons de laranja e azul" />
+    <img width="220px" class="imgskt" src="../../assets/imagens/Tenis vans c.jpg" alt="Tênis vans vermelho" />
     <h2>Tênis Vans</h2>
     <p>
       Tênis Vans Confycush
@@ -65,7 +65,7 @@
   </div>
 
   <div class="card6 aligncard">
-    <img width="208px" class="imgskt" src="../../assets/imagens/Tenis sk8.jpg" alt="Shape de skate DGK com Logo desenhada" />
+    <img width="208px" class="imgskt" src="../../assets/imagens/Tenis sk8.jpg" alt="Tênis vans preto de cano alto" />
     <h2>Tênis Vans</h2>
     <p>
        Tênis Vans UA Sk8 
@@ -81,7 +81,7 @@
 
   <section class="cards3">
       <div class="card7 aligncard">
-    <img width="192px" class="imgskt" src="../../assets/imagens/Tenis dc shoes.jpg" alt="Oito Rolamentos de skate vermelhos " />
+    <img width="192px" class="imgskt" src="../../assets/imagens/Tenis dc shoes.jpg" alt="tênis DC com um tom azulado" />
     <h2>Tênis DC</h2>
     <p>
       Tênis DC Shoes Heatrow
@@ -92,7 +92,7 @@
   </div>
 
   <div class="card8 aligncard">
-    <img width="213px" class="imgskt" src="../../assets/imagens/Tenis dc.jpg" alt="Tenis branco da Adidas com linhas pretas" />
+    <img width="213px" class="imgskt" src="../../assets/imagens/Tenis dc.jpg" alt="Tênis DC preto de camurça" />
    
     <h2>Tênis DC</h2>
     <p>
@@ -104,7 +104,7 @@
   </div>
 
   <div class="card9 aligncard">
-    <img width="210px" class="imgskt" src="../../assets/imagens/Tenis hocks evo.jpg" alt="Blusa de frio vermelha branca e preta Adidas" />
+    <img width="210px" class="imgskt" src="../../assets/imagens/Tenis hocks evo.jpg" alt="Tênis Hocks cor de rosa claro" />
     <h2>Tênis Hocks</h2>
     <p>
      Tênis Hocks
@@ -185,7 +185,6 @@ h1{
  
   .imgskt{
     width: 100%;
-    height: auto;
   }
 }
 @media (max-width:599px){
@@ -195,7 +194,7 @@ h1{
     justify-content: center;
   }
   .aligncard{
-    width: 100%;
+  
     margin: 8px;
   }
   @media(max-width:250px){

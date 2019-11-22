@@ -19,15 +19,7 @@ export default {
   return{
       
     items: [
-      {
-        title: "Login",
-        to: ""
-      },
-      {
-        title: "Cadastro",
-        to: "/adm/usuarios/incluir"
-      },
-
+     
       {
         title: "Painel Administrativo",
         to: "/adm/usuarios/login"

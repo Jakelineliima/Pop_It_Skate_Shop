@@ -3,7 +3,7 @@
   <div class="skate gridskate">
 
   <appheader class="menu"/>
-    <img class="banner" src="../components/imagens/Banner Skate.jpg" alt="banner da pagina inicial"/>
+    <img class="banner" src="../assets/imagens/Banner Skate.jpg" alt="banner da pagina inicial"/>
     <cardskt class="card" />
 
     <div class="txt">
@@ -36,10 +36,8 @@
   .txt{
     text-align: inherit;
   }
-}
-@media(max-width: 800px){
   .banner{
-  margin-top: 4%;
+    margin-top: 55px;
   }
 }
 </style>
@@ -56,6 +54,26 @@ export default {
   components: {
     cardskt,appheader,rodape
   },
+  
+    metaInfo: {
+    // Children can override the title.
+    title: "Roupas Pop-It",
+    titleTemplate: "Roupas <- Pop-It",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        name: "description",
+        content:
+          "Você sempre com as melhores peças pro seu skate pelo menor preço. Pop-It Skate Shop sua loja online"
+      }
+    ]
+  }
   };
 
 

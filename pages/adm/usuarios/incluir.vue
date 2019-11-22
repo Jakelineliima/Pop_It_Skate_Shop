@@ -1,69 +1,71 @@
 <template>
-<v-app>
-  <appheader/>
-<v-form>
   <v-container>
-    <v-col cols="12"  md="3" text-center>
-      <h1>Digite sua informações para se cadastrar.</h1>
-            <v-text-field
-              label="Nome"
-              placeholder="Digite seu nome."
-              outlined
-              v-model="name"
-               :rules="nameRules"
-            ></v-text-field>
-          </v-col>
+    <v-form v-model="valid">
+      <v-card>
+        <v-card-title>{{ modo }} usuário</v-card-title>
+        <v-card-text>
+          <v-text-field
+            v-model="name"
+            :counter="10"
+            :rules="nameRules"
+            label="Nome completo"
+            required />
 
-           <v-col cols="12" sm="6" md="3">
-            <v-text-field
-              label="E-mail"
-              placeholder="Digite seu e-mail."
-              outlined
-               v-model="email"
-        :rules="emailRules"
-            ></v-text-field>
-          </v-col>
+      
 
-           <v-col cols="12" sm="6" md="3">
-            <v-text-field
-              label="Senha"
-              placeholder="Digite uma senha."
-              outlined
-              type="password"
-              v-model="password"
-        :rules="passwordRules"
-            ></v-text-field>
-          </v-col>
-          <button @click="salvar">Salvar</button>
-          <v-alert transition="scale-transition" type="error" :value="!!alert">{{alert}}</v-alert>
+          <v-text-field
+            v-model="email"
+            :counter="50"
+            :rules="emailRules"
+            label="E-mail"
+            required />
+
+          <v-text-field
+            type="password"
+            v-model="password"
+            :counter="4"
+            :rules="passwordRules"
+            label="Senha"
+         
+           />
+        </v-card-text>
+        <v-card-actions>
+          <v-btn color="primary" @click="salvar" :disabled="!valid">
+            <v-icon small class="mr-2">mdi-content-save</v-icon>
+            Salvar
+          </v-btn>
+          <v-btn color="red" to="/adm/dashboard" text @click="cancelar">
+            <v-icon small >mdi-undo</v-icon>
+            Cancelar
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-form>
   </v-container>
-</v-form>
-</v-app>
-  
 </template>
 
 <script>
-import appheader from "../../../components/appheader.vue"
 export default {
-  components:{
-   appheader
-  },
   data () {
     return {
+      id: this.$route.params.id,
+      modo: this.$route.params.id == 'incluir' ? 'Incluir' : 'Editar',
       name: '',
-      nameRules: [
-      v => !!v || 'O nome é necessario.'],
-
       email: '',
-      emailRules: [
-      v => !!v || 'E-mail é necessario',
-     
-    ],
       password: '',
-      passwordRules:[
-    v => !!v || 'Digite sua senha!',
-    ], 
-    alert:''
+      valid: true,
+      nameRules: [
+        v => !!v || 'Nome é obrigatório!',
+       
+      ],
+      emailRules: [
+        v => !!v || 'E-mail é obrigatório!',
+        v => /.+@.+\..+/.test(v) || 'E-mail deve ter um formato válido'
+      ],
+      passwordRules: [
+        v => !!v || 'Senha é obrigatória!',
+        v => (v && v.length <= 10) || 'Senha deve ter no minimo 4 caracteres!',
+      ]
     }
   },
 
@@ -79,15 +81,13 @@ export default {
       if (usuarios) {
         dados.id = usuarios.length + 1
         usuarios.push(dados)
-        this.$router.push('/adm/usuarios/lista')
-        this.$ls.set('usuarios', usuarios)
       } else {
         dados.id = 1
         usuarios = [ dados ]
-        this.alert = "Não há dados registrados!"
       }
-      
+      this.$ls.set('usuarios', usuarios)
 
+      this.$router.push('/adm/usuarios')
     }
   }
 }

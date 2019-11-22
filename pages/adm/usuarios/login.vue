@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <div>
     <appheader />
 
     <v-card class="card">
@@ -32,14 +32,16 @@
          
       </v-form>
     </v-card>
-  </v-app>
+    <rodape/>
+  </div>
 </template>
 
 <script>
 import appheader from "../../../components/appheader.vue";
+import rodape from "../../../components/rodape"
 export default {
   components: {
-    appheader
+    appheader,rodape
   },
   data() {
     return {
@@ -54,7 +56,7 @@ export default {
 
   methods: {
     validate() {
-      const usuarios = this.$ls.get("usuarios");
+      const usuarios = this.$ls.get('usuarios');
       if (usuarios) {
         const usuario = usuarios.find(
           u => u.email == this.email && u.password == this.password
@@ -93,5 +95,19 @@ h1 {
 .btns{
   margin-top: 31px
 }
+@media(max-width: 860px){
+  .card{
+    font-size: 12px;
+    display: contents;
+  }
+  h1{
+    margin-top: 55px;
+  }
+  .form{
+    padding-top: 70px;
+    padding-bottom: 84px;
+  }
+}
+
 </style>
 

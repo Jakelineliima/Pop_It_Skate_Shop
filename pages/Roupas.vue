@@ -3,7 +3,7 @@
     <appheader class="menu"/>
     <img
       class="banner"
-      src="../components/imagens/Banner Roupas.jpg" longDesc="Um jovem andando de skate em um lugar abandonado"/>
+      src="../assets/imagens/Banner Roupas.jpg" longDesc="Dois homens andando de skate um esta fazendo manobra e o outro esta srrindo com o skate na mão"/>
 
     <cardroupa class="card" />
     <div class="txt">
@@ -57,7 +57,7 @@
 }
 @media(max-width: 800px){
   .banner{
-  margin-top: 4%;
+  margin-top: 55px;
   }
 }
 </style>
@@ -71,6 +71,26 @@ export default {
     name:"roupas",
     components: {
         cardroupa,appheader,rodape
-    }
+    },
+    
+   metaInfo: {
+    // Children can override the title.
+    title: "Roupas Pop-It",
+    titleTemplate: "Roupas <- Pop-It",
+    meta: [
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      },
+      {
+        name: "description",
+        content:
+          "Você sempre confortável de onde estiver com os produtos da Pop-It Itápolis"
+      }
+    ]
+  }
 }
 </script>
