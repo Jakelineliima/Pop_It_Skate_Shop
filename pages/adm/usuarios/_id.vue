@@ -36,7 +36,7 @@
             <v-icon small class="mr-2">mdi-content-save</v-icon>Salvar
           </v-btn>
           <v-btn color="secondary" text @click="cancelar">
-            <v-icon small class="mr-2">mdi-undo</v-icon>Cancelar
+            <v-icon small class="mr-2" to="/adm/dashboard">mdi-undo</v-icon>Cancelar
           </v-btn>
         </v-card-actions>
       </v-card>
@@ -50,12 +50,12 @@ export default {
     return {
       id: this.$route.params.id,
       modo: this.$route.params.id == "incluir" ? "Incluir" : "Editar",
-      nome: "",
+      name: "",
 
       email: "",
       senha: "",
       valid: true,
-      nomeRegras: [v => !!v || "Nome completo é obrigatório"],
+      nameRegras: [v => !!v || "Nome completo é obrigatório"],
       apelidoRegras: [v => !!v || "Apelido é obrigatório"],
       emailRegras: [
         v => !!v || "E-mail é obrigatório",
@@ -77,7 +77,7 @@ export default {
     if (usuarios) {
       const usuario = usuarios.find(u => u.id == this.id);
       if (usuario) {
-        this.nome = usuario.nome;
+        this.name = usuario.name;
         this.apelido = usuario.apelido;
         this.email = usuario.email;
       }
@@ -96,24 +96,24 @@ export default {
       if (this.modo == "Incluir") {
         dados.push({
           id: this.gerarId(),
-          nome: this.nome,
+          name: this.name,
           apelido: this.apelido,
           email: this.email,
           senha: this.senha
         });
       } else {
         const i = dados.findIndex(u => u.id == this.id);
-        dados[i].nome = this.nome;
+        dados[i].name = this.name;
         dados[i].apelido = this.apelido;
         dados[i].email = this.email;
       }
 
       this.$ls.set("usuarios", dados);
-      this.$router.push("/admin/usuarios");
+      this.$router.push("/adm/usuarios/lista");
     },
 
     cancelar() {
-      this.$router.push("/admin/usuarios");
+      this.$router.push("/adm/usuarios/");
     }
   }
 };

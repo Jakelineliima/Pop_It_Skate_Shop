@@ -75,7 +75,7 @@ export default {
       }
       this.$ls.set("usuarios", usuarios);
 
-      this.$router.push("/adm/usuarios");
+      this.$router.push("/adm/usuarios/lista");
     }
   }
 };

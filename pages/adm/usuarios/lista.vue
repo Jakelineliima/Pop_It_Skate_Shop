@@ -37,7 +37,7 @@ export default {
   data() {
     return {
       headers: [
-        { text: "Nome completo", value: "nome" },
+        { text: "Nome completo", value: "name" },
         { text: "E-mail", value: "email" },
         { text: "Ações", value: "action", sortable: false, width: 100 }
       ],

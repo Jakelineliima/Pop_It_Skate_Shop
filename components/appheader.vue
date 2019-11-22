@@ -144,7 +144,7 @@ export default {
           to: "/acessorios"
         },
         {
-          icon: "mdi-info-outline",
+          icon: "mdi-information-outline",
           title: "Sobre",
           to: "/sobre"
         },
