@@ -7,8 +7,8 @@
       class="elevation-1"
       :hide-default-footer="true"
     >
-      <template v-slot:top class="txt" >
-        <v-toolbar  color="white" class="cont">
+      <template v-slot:top class="txt">
+        <v-toolbar color="white" class="cont">
           <v-toolbar-title class="cont">Usuários</v-toolbar-title>
           <v-spacer />
           <div class="btn">
@@ -77,13 +77,13 @@ export default {
     display: flex;
     flex-wrap: wrap;
   }
-  .cont{
+  .cont {
     display: contents;
   }
-  .btn{
+  .btn {
     margin: 3px -4px -17px 47px;
   }
-  .txt{
+  .txt {
     margin-top: 25px;
   }
 }

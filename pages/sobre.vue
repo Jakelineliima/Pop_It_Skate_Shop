@@ -1,6 +1,6 @@
 <template>
   <div class="sobre gridsobre">
-    <appheader class="menu"/>
+    <appheader class="menu" />
     <img
       class="banner"
       src="../assets/imagens/Banner Sobre.jpg"
@@ -19,8 +19,13 @@
       <h2>Pop-It sua skate shop Online de onde estiver.</h2>
     </div>
 
-    <video class="video" src="../assets/imagens/Pop-It Skate Shop.mp4"></video>
-    <rodape class="rodape"/>
+    <video class="video" controls="controls">
+      <source src="../assets/imagens/Pop-It Skate Shop.mp4" type="video/mp4" />
+      <object data width="320" height="240">
+        <embed width="320" height="240" src="../assets/imagens/Pop-It Skate Shop.mp4" />
+      </object>
+    </video>
+    <rodape class="rodape" />
   </div>
 </template>
 
@@ -33,10 +38,8 @@
 .sobre {
   grid-column: 1/4;
 }
-.menu{
+.menu {
   grid-column: 1/4;
- 
-
 }
 .banner {
   grid-column: 1/4;
@@ -57,7 +60,7 @@
   padding: 57px;
   font-size: 17px;
 }
-.rodape{
+.rodape {
   grid-column: 1/4;
   grid-row: 8/9;
 }
@@ -70,23 +73,31 @@
   .banner {
     margin-top: 55px;
   }
+  .video {
+    width: 66%;
+    margin-left: 17%;
+  }
 }
-
-
+@media (max-width: 550px) {
+  .video {
+    width: 96%;
+    margin-left: 1%;
+  }
+}
 </style>
 
 
 <script>
-import appheader from "../components/appheader.vue"
-import rodape from "../components/rodape.vue"
+import appheader from "../components/appheader.vue";
+import rodape from "../components/rodape.vue";
 export default {
   name: "quemsomos",
-  components:{
-appheader,rodape
+  components: {
+    appheader,
+    rodape
   },
-  
-   
-   metaInfo: {
+
+  metaInfo: {
     // Children can override the title.
     title: "Sobre a Pop-It",
     titleTemplate: "Sobre a <- Pop-It",
@@ -105,6 +116,5 @@ appheader,rodape
       }
     ]
   }
-  
 };
 </script>

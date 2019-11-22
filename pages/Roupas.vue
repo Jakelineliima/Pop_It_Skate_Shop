@@ -1,15 +1,20 @@
 <template>
   <div class="roupas gridroupas">
-    <appheader class="menu"/>
+    <appheader class="menu" />
     <img
       class="banner"
-      src="../assets/imagens/Banner Roupas.jpg" longDesc="Dois homens andando de skate um esta fazendo manobra e o outro esta srrindo com o skate na mão"/>
+      src="../assets/imagens/Banner Roupas.jpg"
+      longdesc="Dois homens andando de skate um esta fazendo manobra e o outro esta srrindo com o skate na mão"
+    />
 
     <cardroupa class="card" />
     <div class="txt">
-     <p>Você sempre confortável de onde estiver com os produtos da <strong>Pop-It Itápolis</strong> </p>
+      <p>
+        Você sempre confortável de onde estiver com os produtos da
+        <strong>Pop-It Itápolis</strong>
+      </p>
     </div>
-    <rodape class="rodape"/>
+    <rodape class="rodape" />
   </div>
 </template>
 
@@ -23,10 +28,8 @@
 .roupas {
   grid-column: 1/4;
 }
-.menu{
+.menu {
   grid-column: 1/4;
- 
-
 }
 .banner {
   grid-column: 1/4;
@@ -46,34 +49,36 @@
   padding: 57px;
   font-size: 18px;
 }
-.rodape{
+.rodape {
   grid-column: 1/4;
   grid-row: 8/9;
 }
-@media(max-width: 924px){
-  .txt{
-    text-align: justify
+@media (max-width: 924px) {
+  .txt {
+    text-align: justify;
   }
 }
-@media(max-width: 800px){
-  .banner{
-  margin-top: 55px;
+@media (max-width: 800px) {
+  .banner {
+    margin-top: 55px;
   }
 }
 </style>
 
 <script>
-import cardroupa from "../components/cards/cardroupa.vue"
-import appheader from "../components/appheader.vue"
-import rodape from "../components/rodape.vue"
+import cardroupa from "../components/cards/cardroupa.vue";
+import appheader from "../components/appheader.vue";
+import rodape from "../components/rodape.vue";
 
 export default {
-    name:"roupas",
-    components: {
-        cardroupa,appheader,rodape
-    },
-    
-   metaInfo: {
+  name: "roupas",
+  components: {
+    cardroupa,
+    appheader,
+    rodape
+  },
+
+  metaInfo: {
     // Children can override the title.
     title: "Roupas Pop-It",
     titleTemplate: "Roupas <- Pop-It",
@@ -92,5 +97,5 @@ export default {
       }
     ]
   }
-}
+};
 </script>

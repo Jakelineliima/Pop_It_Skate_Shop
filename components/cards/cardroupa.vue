@@ -1,10 +1,10 @@
 <template>
   <main>
     <h1>Roupas</h1>
-    
+
     <section class="cards" id="card">
       <div class="card1 aligncard">
-        <img 
+        <img
           class="imgskt"
           src="../../assets/imagens/Calça Dc Shoes.jpg"
           alt="Metade do corpo de um homen usando uma calça preta com a mão no bolso"
@@ -51,7 +51,11 @@
 
     <section class="cards2">
       <div class="card4 aligncard">
-        <img class="imgskt" src="../../assets/imagens/camiseta grizzly.jpg" alt="Camiseta preta com um urso psicodelico desenhada" />
+        <img
+          class="imgskt"
+          src="../../assets/imagens/camiseta grizzly.jpg"
+          alt="Camiseta preta com um urso psicodelico desenhada"
+        />
         <h2>Camiseta Grizzly</h2>
         <p>
           Camiseta Grizzly Psicodelic
@@ -123,7 +127,7 @@
           <br />
         </p>
         <h2>R$ 10,00</h2>
-        <v-btn class="btn" color="#000" >Comprar</v-btn>
+        <v-btn class="btn" color="#000">Comprar</v-btn>
       </div>
 
       <div class="card9 aligncard">
@@ -152,38 +156,38 @@ export default {
 
 
 <style scoped>
-
-
-main{
+main {
   height: 100%;
   text-align: center;
-  font-size: 13px; 
-  }
-.btn{
+  font-size: 13px;
+}
+.btn {
   color: #fff;
   width: 168px;
 }
 
-.cards2{
+.cards2 {
   margin-top: 43px;
 }
 
-.cards,.cards2,.cards3 {
+.cards,
+.cards2,
+.cards3 {
   display: flex;
   flex-direction: row;
- justify-content: space-evenly;
+  justify-content: space-evenly;
 }
 
-.aligncard{
-  display:flex;
+.aligncard {
+  display: flex;
   flex-direction: column;
   width: 248px;
   padding: 10px 0 10px;
   align-items: center;
-  box-shadow: #18181A 0px 0 10px -2px;
+  box-shadow: #18181a 0px 0 10px -2px;
 }
 
-.imgskt{
+.imgskt {
   width: 100%;
   height: 249px;
 }
@@ -192,72 +196,60 @@ h2 {
   color: #000;
 }
 
-
-h1{
+h1 {
   padding: 10px;
 }
 
-
 @media (max-width: 980px) {
- 
-   .cards,.cards2,.cards3{
-     display:flex;
-     flex-wrap: wrap;
-     align-items: center;
-     
-   }
-   .cards img{
-     height: 256px;
-   }
-   .cards3 img{
-     height: 240px;
-   }
-
-
- /*
-  .imgskt{
-    width: 100%;
-    height: auto;
+  .cards,
+  .cards2,
+  .cards3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
   }
-/*
-  .card2 img{
-    width: 80%
-  }*/
+  .cards img {
+    height: 256px;
+  }
+  .cards3 img {
+    height: 240px;
+  }
 }
-@media (max-width:599px){
-  .cards,.cards2,.cards3{
+@media (max-width: 599px) {
+  .cards,
+  .cards2,
+  .cards3 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .aligncard{
-    /*
-    width: 68%;*/
+  .aligncard {
     margin: 8px;
   }
-  @media(max-width:360px){
-    h1{
+  @media (max-width: 360px) {
+    h1 {
       padding: 0;
       font-size: 21px;
     }
-    .cards img,.cards2 img, .cards3 img{
-      width: 100%
+    .cards img,
+    .cards2 img,
+    .cards3 img {
+      width: 100%;
     }
-    .btn{
+    .btn {
       width: 88%;
     }
-    .imgskt{
+    .imgskt {
       width: 100%;
     }
   }
 }
 @media (max-width: 760px) {
-    .card3,.card6,.card9{
+  .card3,
+  .card6,
+  .card9 {
     margin-top: 28px;
-  }/*
-  .card1{
-    width: 193px;
-  }*/
+  }
 }
 </style>
 

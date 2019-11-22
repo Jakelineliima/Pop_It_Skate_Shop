@@ -1,19 +1,22 @@
 <template>
   <div class="tenis gridtenis">
-    <appheader class="menu"/>
+    <appheader class="menu" />
     <img
       class="banner"
-      src="../assets/imagens/Banner Tenis.jpg" longDesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "/>
+      src="../assets/imagens/Banner Tenis.jpg"
+      longdesc="Banner da pagina de Tênis com um homem sentado com uma skate de frente para o mar. "
+    />
 
     <cardtenis class="card" />
     <div class="txt">
-      <p> Todo o conforto e estilo que seus pés merecem com um preço que cabe no seu bolso.
-        <br> <strong>  Pop-It
-</strong>,sua loja online , sempre pensando no seu conforto.
-
-</p>
+      <p>
+        Todo o conforto e estilo que seus pés merecem com um preço que cabe no seu bolso.
+        <br />
+        <strong>Pop-It</strong>
+,sua loja online , sempre pensando no seu conforto.
+      </p>
     </div>
-    <rodape class="rodape"/>
+    <rodape class="rodape" />
   </div>
 </template>
 
@@ -26,7 +29,7 @@
 .tenis {
   grid-column: 1/4;
 }
-.menu{
+.menu {
   grid-column: 1/4;
 }
 
@@ -48,24 +51,24 @@
   padding: 57px;
   font-size: 18px;
 }
-.rodape{
+.rodape {
   grid-column: 1/4;
   grid-row: 8/9;
 }
-@media(max-width: 924px){
-  .txt{
+@media (max-width: 924px) {
+  .txt {
     text-align: inherit;
   }
 }
-@media(max-width: 800px){
-  .banner{
-      margin-top: 55px;
-      width: 100%;
+@media (max-width: 800px) {
+  .banner {
+    margin-top: 55px;
+    width: 100%;
   }
-} 
+}
 
-@media(max-width: 300px){
-  .txt{
+@media (max-width: 300px) {
+  .txt {
     text-align: inherit;
   }
 }
@@ -76,17 +79,18 @@
 // @ is an alias to /src
 
 import cardtenis from "../components/cards/cardtenis.vue";
-import appheader from "../components/appheader.vue"
-import rodape from "../components/rodape.vue"
+import appheader from "../components/appheader.vue";
+import rodape from "../components/rodape.vue";
 
 export default {
   name: "tenis",
   components: {
-    cardtenis,appheader,rodape
-    
+    cardtenis,
+    appheader,
+    rodape
   },
-   
-   metaInfo: {
+
+  metaInfo: {
     // Children can override the title.
     title: "Tênis a Pop-It",
     titleTemplate: "Tênis <- Pop-It",

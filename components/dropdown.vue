@@ -14,18 +14,15 @@
 <script>
 export default {
   name: "dropdown",
-  data ()  {
-    
-  return{
-      
-    items: [
-     
-      {
-        title: "Painel Administrativo",
-        to: "/adm/usuarios/login"
-      }
-    ]
+  data() {
+    return {
+      items: [
+        {
+          title: "Painel Administrativo",
+          to: "/adm/usuarios/login"
+        }
+      ]
+    };
   }
-  
-}}
+};
 </script>

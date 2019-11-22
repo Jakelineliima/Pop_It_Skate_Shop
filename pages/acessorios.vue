@@ -12,7 +12,7 @@
       <p>
         Na
         <strong>Pop-It</strong>
- você encontra acessórios com os melhores preços.
+        você encontra acessórios com os melhores preços.
       </p>
     </div>
     <rodape class="rodape" />
@@ -97,8 +97,7 @@ export default {
       },
       {
         name: "description",
-        content:
-          "Na Pop-It você encontra acessórios com os melhores preços."
+        content: "Na Pop-It você encontra acessórios com os melhores preços."
       }
     ]
   }

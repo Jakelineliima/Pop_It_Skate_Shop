@@ -22,26 +22,24 @@
             required
           ></v-text-field>
         </div>
-         <v-alert transition="scale-transition" type="error" :value="!!alert">{{alert}}</v-alert>
+        <v-alert transition="scale-transition" type="error" :value="!!alert">{{alert}}</v-alert>
         <div class="btns">
           <v-btn :disabled="!valid" color="green" class="mr-4 entrar" @click="validate">Entrar</v-btn>
           <v-btn to="/" class="btn" color="#424242">Voltar</v-btn>
-         
         </div>
-
-         
       </v-form>
     </v-card>
-    <rodape/>
+    <rodape />
   </div>
 </template>
 
 <script>
 import appheader from "../../../components/appheader.vue";
-import rodape from "../../../components/rodape"
+import rodape from "../../../components/rodape";
 export default {
   components: {
-    appheader,rodape
+    appheader,
+    rodape
   },
   data() {
     return {
@@ -50,21 +48,21 @@ export default {
       emailRules: [v => !!v || "E-mail é necessario."],
       password: "",
       passwordRules: [v => !!v || "Digite sua senha!"],
-      alert: ''
+      alert: ""
     };
   },
 
   methods: {
     validate() {
-      const usuarios = this.$ls.get('usuarios');
+      const usuarios = this.$ls.get("usuarios");
       if (usuarios) {
         const usuario = usuarios.find(
           u => u.email == this.email && u.password == this.password
         );
         if (usuario) this.$router.push("/adm/dashboard");
         else {
-        this.alert = 'Você não tem permissão para entrar!'
-      }
+          this.alert = "Você não tem permissão para entrar!";
+        }
       }
     }
   }
@@ -92,22 +90,21 @@ h1 {
   color: #ffff;
 }
 
-.btns{
-  margin-top: 31px
+.btns {
+  margin-top: 31px;
 }
-@media(max-width: 860px){
-  .card{
+@media (max-width: 860px) {
+  .card {
     font-size: 12px;
     display: contents;
   }
-  h1{
+  h1 {
     margin-top: 55px;
   }
-  .form{
+  .form {
     padding-top: 70px;
     padding-bottom: 84px;
   }
 }
-
 </style>
 

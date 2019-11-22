@@ -61,7 +61,7 @@
   .txt {
     text-align: inherit;
   }
-  .banner{
+  .banner {
     margin-top: 55px;
   }
 }
@@ -95,7 +95,7 @@ export default {
     appheader,
     rodape
   },
-   metaInfo: {
+  metaInfo: {
     // Children can override the title.
     title: "Inicio Pop-It",
     titleTemplate: "Inicio<- Pop-It",
@@ -105,9 +105,10 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || "Na Pop-It você encontra os melhores produtos com descontos e marcas que você procura. Skates, Roupas, Tênis e Acessórios Pop It"
-      },
-    
+        content:
+          process.env.npm_package_description ||
+          "Na Pop-It você encontra os melhores produtos com descontos e marcas que você procura. Skates, Roupas, Tênis e Acessórios Pop It"
+      }
     ]
   }
 };

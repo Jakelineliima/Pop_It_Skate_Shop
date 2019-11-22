@@ -2,8 +2,6 @@
   <v-app id="inspire">
     <v-navigation-drawer v-model="drawer" app clipped color="#000">
       <v-list>
-     
-
         <v-list-item @click to="/adm/usuarios/lista">
           <v-list-item-action>
             <v-icon color="#fff">mdi-account</v-icon>
@@ -13,17 +11,14 @@
           </v-list-item-content>
         </v-list-item>
 
-      
         <v-list-item @click to="/">
           <v-list-item-action>
-            <v-icon color="#fff">mdi-arrow-left-thick </v-icon>
+            <v-icon color="#fff">mdi-arrow-left-thick</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title class="white--text">Voltar ao site</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
-
       </v-list>
     </v-navigation-drawer>
 
@@ -92,7 +87,7 @@ export default {
   width: 40%;
 }
 
-.btnvoltar{
+.btnvoltar {
   display: none;
 }
 
@@ -106,7 +101,6 @@ h3 {
   text-align: center;
   grid-column: 2/5;
   grid-row: 1/2;
-
 }
 @media (max-width: 800px) {
   .alinhar {
@@ -114,21 +108,21 @@ h3 {
     flex-wrap: wrap;
     margin-top: 11px;
   }
-  h3{
+  h3 {
     padding: 27px;
   }
-  .txt{
+  .txt {
     font-size: 15px;
   }
-  .btn{
-    grid-row:2/3;
+  .btn {
+    grid-row: 2/3;
   }
 }
-@media(max-width:560px){
-  .btn{
+@media (max-width: 560px) {
+  .btn {
     display: none;
   }
-  .btnvoltar{
+  .btnvoltar {
     display: block;
   }
 }
@@ -136,10 +130,8 @@ h3 {
   .lista {
     margin: 0;
   }
-  .menudash{
+  .menudash {
     flex-direction: column;
   }
-  
- 
 }
 </style>
