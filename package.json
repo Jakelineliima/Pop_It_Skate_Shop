@@ -16,7 +16,7 @@
     "bootstrap": "^4.3.1",
     "cross-env": "^5.2.0",
     "express": "^4.16.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "nuxt": "^2.0.0",
     "popper.js": "^1.16.0",
     "vue-ls": "^3.2.1",
